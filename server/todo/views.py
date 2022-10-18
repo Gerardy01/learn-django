@@ -84,6 +84,11 @@ def todo_list_with_id_handle(request, **kwargs):
                 'result': 'failed',
                 'msg': 'something wrong'
             }, status=500)
+    else:
+        return JsonResponse({
+            'status': 'failed',
+            'msg': 'wrong Http method'
+        }, status=404)
 
         
 
